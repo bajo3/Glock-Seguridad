@@ -261,6 +261,9 @@ body {
   }
 
   @media screen and (max-width: 768px) {
+    #quienes-somos{
+      height: 100%;
+    }
     #quienes-somos p {
       width: 100%;
     }
