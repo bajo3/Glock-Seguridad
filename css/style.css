@@ -1,0 +1,198 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background  : url("../img/pexels-anni-roenkae-3435272.jpg") #f1f1f1;
+  }
+  
+  /* Barra de navegación */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0c0c35d2;
+    backdrop-filter: blur(15px);
+    padding: 10px;
+    z-index: 100;
+  }
+
+  .logo{
+    float: left;
+    height: 30px;
+  }
+
+  main{
+    margin-top: 50px  ;
+  }
+
+  
+  nav ul {
+    text-align: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 4px;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 10px;
+    text-align: center;
+    vertical-align: middle;
+    
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+    text-decoration: underline 2px blue;
+    transition: all .3  s ease-in;
+ 
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline 2px red;
+  }
+  
+  /* Encabezado de sección */
+
+  h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Galería de imágenes */
+  .galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .imagen {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    overflow: hidden;
+  }
+  
+  .imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .imagen:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* Pie de página */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Estilos adicionales e innovadores */
+  .logo img {
+    width: 100px;
+    height: auto;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+  }
+  
+  #inicio {
+    background-color: #0f0f0f96;
+    padding: 40px;
+    text-align: center;
+  }
+
+  #inicio h2{
+    color: wheat;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#inicio p{
+    background-color: aquamarine;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+
+  #inicio img{
+    width: 65%;
+  }
+  
+  #quienes-somos {
+    background-color: #ffffff8c;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  #trabajos-realizados {
+    background-color: #f9f9f9;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  /* Estilos responsivos */
+  @media screen and (max-width: 768px) {
+    nav ul li {
+      display: block;
+      margin-bottom: 10px;
+    }
+  
+    .imagen {
+      width: 100%;
+      height: auto;
+      margin: 10px 0;
+    }
+  }
+  
+
+  /* Estilos de la sección de contacto */
+#contacto {
+    background-color: #fff;
+    padding: 40px;
+    text-align: center;
+  }
+  
+  #contacto h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .contacto-info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .contacto-item {
+    width: 200px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contacto-item h3 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .contacto-item p {
+    color: #666;
+    font-size: 16px;
+  }
+  
+  /* Estilos adicionales o ajustes responsivos según sea necesario */
+  
