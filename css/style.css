@@ -5,30 +5,29 @@ body {
     padding: 0;
     background  : url("../img/pexels-anni-roenkae-3435272.jpg") #f1f1f1;
   }
-  
-  /* Barra de navegación */
-  nav {
+
+  header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background-color: #0c0c35d2;
     backdrop-filter: blur(15px);
+    z-index: 9999;
+  }
+  
+  
+  /* Barra de navegación */
+  nav { 
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
     padding: 10px;
     z-index: 100;
   }
 
-  .logo{
-    float: left;
-    height: 30px;
-  }
-
-  main{
-    margin-top: 50px  ;
-  }
-
-  
-  nav ul {
+    nav ul {
     text-align: center;
     list-style: none;
     margin: 0;
@@ -56,6 +55,101 @@ body {
   nav ul li a:hover {
     text-decoration: underline 2px red;
   }
+
+  .logo{
+    float: left;
+    height: 30px;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    
+  }
+  
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    
+  }
+  
+  .hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #000;
+    margin-bottom: 5px;
+    transition: background-color 0.3s ease-in-out;
+    
+  }
+  
+  .menu ul {
+    display: flex;
+    list-style: none;
+    transition: opacity 0.5s ease-in-out, background-color 0.3s ease-in-out;
+    background-color: transparent;
+    
+  }
+  
+  .menu ul li {
+    margin-right: 15px;
+    
+    
+  }
+  
+  @media screen and (max-width: 768px) {
+    .menu ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #020202;
+      text-align: center;
+      height: 100vh;
+      margin: 0;
+      transition: opacity 0.3s ease-in-out;
+      opacity: 0;
+    }
+  
+    .menu.open ul {
+        display: flex;
+        flex-direction: column;
+        
+        opacity: 1;
+    }
+
+    .logo{
+        z-index: 999;
+    }
+
+    .menu.open ul li {
+        margin-top: 15%;
+    }
+    .menu.open ul li a {
+        font-size: 2rem;
+    }
+  
+    .hamburger {
+        display: flex;
+        transform: rotate(0);
+      }
+    
+      .menu.open .hamburger {
+        transform: rotate(90deg);
+      }
+  }
+  
+  main{
+    margin-top: 50px  ;
+  }
+
+  
+
   
   /* Encabezado de sección */
 
