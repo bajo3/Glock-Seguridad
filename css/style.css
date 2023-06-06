@@ -150,9 +150,6 @@ body {
   main{
     margin-top: 50px  ;
   }
-
-  
-
   
   /* Encabezado de sección */
 
@@ -224,6 +221,16 @@ body {
 
   #inicio img{
     width: 65%;
+  }
+
+  @media screen and (max-width: 768px) {
+    #inicio {
+
+    }
+    #inicio img{
+        width: 100%;
+        
+      }
   }
   
   #quienes-somos {
