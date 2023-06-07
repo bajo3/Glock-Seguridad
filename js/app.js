@@ -19,13 +19,13 @@ $(document).ready(function() {
         {
           breakpoint: 768,
           settings: {
-            arrows: true
+            arrows: false
           }
         },
         {
           breakpoint: 480,
           settings: {
-            arrows: true,
+            arrows: false,
             dots: false
           }
         }
