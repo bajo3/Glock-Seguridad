@@ -1,366 +1,392 @@
 /* Estilos generales */
-*{
+* {
   scroll-behavior: smooth;
 }
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background  : url("../img/pexels-anni-roenkae-3435272.jpg") #f1f1f1;
-  }
 
-  header {
-    position: fixed;
-    top: 0;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f1f1f1;
+  background-image: url("../img/pexels-anni-roenkae-3435272.jpg");
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0000009c;
+  backdrop-filter: blur(15px);
+  z-index: 9999;
+}
+
+/* Barra de navegación */
+nav {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  padding: 10px;
+  z-index: 100;
+}
+
+nav ul {
+  text-align: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 4px;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px;
+  text-decoration: underline 2px blue;
+  transition: all 0.3s ease-in;
+}
+
+nav ul li a:hover {
+  text-decoration: underline 2px red;
+}
+
+.logo {
+  float: left;
+  height: 30px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.hamburger {
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hamburger span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #000;
+  margin-bottom: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  transition: opacity 0.5s ease-in-out, background-color 0.3s ease-in-out;
+  background-color: transparent;
+}
+
+.menu ul li {
+  margin-right: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .menu ul {
+    display: none;
+    position: absolute;
+    top: 100%;
     left: 0;
     width: 100%;
-    background-color: #0c0c35d2;
-    backdrop-filter: blur(15px);
-    z-index: 9999;
-  }
-  
-  
-  /* Barra de navegación */
-  nav { 
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    align-items: center;
-    padding: 10px;
-    z-index: 100;
-  }
-
-    nav ul {
-    text-align: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    margin-top: 4px;
-  }
-  
-  nav ul li {
-    display: inline;
-    margin-right: 10px;
-    text-align: center;
-    vertical-align: middle;
-    
-  }
-  
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 5px;
-    text-decoration: underline 2px blue;
-    transition: all .3  s ease-in;
- 
-  }
-  
-  nav ul li a:hover {
-    text-decoration: underline 2px red;
-  }
-
-  .logo{
-    float: left;
-    height: 30px;
-  }
-
-  .menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    
-  }
-  
-  .hamburger {
-    background-color: wheat;
-    padding: 10px;
-    border-radius: 5px;
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-    
-  }
-  
-  .hamburger span {
-    display: block;
-    width: 30px;
-    height: 3px;
-    background-color: #000;
-    margin-bottom: 5px;
-    transition: background-color 0.3s ease-in-out;
-    
-  }
-  
-  .menu ul {
-    display: flex;
-    list-style: none;
-    transition: opacity 0.5s ease-in-out, background-color 0.3s ease-in-out;
-    background-color: transparent;
-    
-  }
-  
-  .menu ul li {
-    margin-right: 15px;
-    
-    
-  }
-  
-  @media screen and (max-width: 768px) {
-    .menu ul {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background-color: #020202;
-      text-align: center;
-      height: 100vh;
-      margin: 0;
-      transition: opacity 0.3s ease-in-out;
-      opacity: 0;
-    }
-  
-    .menu.open ul {
-        display: flex;
-        flex-direction: column;
-        
-        opacity: 1;
-    }
-
-    .logo{
-        z-index: 999;
-    }
-
-    .menu.open ul li {
-        margin-top: 15%;
-    }
-    .menu.open ul li a {
-        font-size: 2rem;
-    }
-  
-    .hamburger {
-        display: flex;
-        transform: rotate(0);
-      }
-    
-      .menu.open .hamburger {
-        transform: rotate(90deg);
-      }
-  }
-  
-  main{
-    margin-top: 50px  ;
-  }
-  
-  /* Encabezado de sección */
-
- 
-  
-  /* Galería de imágenes */
-  .galeria {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .imagen {
-    width: 200px;
-    height: 200px;
-    margin: 10px;
-    overflow: hidden;
-  }
-  
-  .imagen img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-  }
-  
-  .imagen:hover img {
-    transform: scale(1.1);
-  }
-  
-  /* Pie de página */
-  footer {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-  }
-  
-  /* Estilos adicionales e innovadores */
-  .logo img {
-    width: 100px;
-    height: auto;
-    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
-  }
-  
-  #inicio {
-    background-color: #0f0f0f96;
-    backdrop-filter: blur(5px);
-    padding: 40px;
-    text-align: center;
-  }
-
-  .title{
-    color: wheat;
-    font-size: 45px;
-    font-weight: bold;
-}
-
-#inicio p{
-    background-color: aquamarine;
-    display: inline-block;
-    padding: 10px;
-    border-radius: 15px;
-}
-
-
-  #inicio img{
-    width: 65%;
-  }
-
-  @media screen and (max-width: 768px) {
-
-    #inicio img{
-        width: 100%;
-        
-      }
-  }
-  
-  #quienes-somos {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #31313196;
-    backdrop-filter: blur(5px);
-    padding: 40px;
+    background-color: #020202;
     text-align: center;
     height: 100vh;
+    margin: 0;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
   }
 
-  #quienes-somos h2{
-    text-decoration: underline  ;
+  .menu.open ul {
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+  }
+
+  .logo {
+    z-index: 999;
+  }
+
+  .menu.open ul li {
+    margin-top: 15%;
+  }
+
+  .menu.open ul li a {
+    font-size: 2rem;
+  }
+
+  .hamburger {
+    display: flex;
+    transform: rotate(0);
+  }
+
+  .menu.open .hamburger {
+    transform: rotate(90deg);
+  }
+}
+
+main {
+  margin-top: 50px;
+}
+
+/* Encabezado de sección */
+
+/* Galería de imágenes */
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.imagen {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  overflow: hidden;
+}
+
+.imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.imagen:hover img {
+  transform: scale(1.1);
+}
+
+
+
+/* Estilos adicionales e innovadores */
+.logo img {
+  width: 100px;
+  height: auto;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+#inicio {
+  background-color: rgba(15, 15, 15, 0.85);
+  padding: 40px;
+  text-align: center;
+}
+
+.title {
+  color: #f5f5f5;
+  font-size: 45px;
+  font-weight: bold;
+}
+
+#inicio p {
+  background-color: #00ced1;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+#inicio img {
+  width: 65%;
+}
+
+@media screen and (max-width: 768px) {
+  #inicio img {
+    width: 100%;
+  }
+}
+
+#quienes-somos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(49, 48, 48, 0.65);
+  padding: 40px;
+  text-align: center;
+  height: 100vh;
+}
+
+#quienes-somos h2 {
+  text-decoration: underline;
+  color: #f5f5f5;
+}
+
+#quienes-somos p {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  text-align: justify;
+  color: #f5f5f5;
+  font-size: 20px;
+}
+
+#quienes-somos img {
+  margin-top: 30px;
+  width: auto;
+  height: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  #quienes-somos {
+    height: 100%;
   }
 
   #quienes-somos p {
-    display: flex;
-    justify-content: center;
-    width: 50%;
-    text-align: justify;
-    color: whitesmoke;
-    font-size: 20px;
-  }
-  
-
-  #quienes-somos img{
-    margin-top: 30px;
-    width: auto;
-    height: 50%;
+    width: 100%;
   }
 
-  @media screen and (max-width: 768px) {
-    #quienes-somos{
-      height: 100%;
-    }
-    #quienes-somos p {
-      width: 100%;
-    }
-
-    #quienes-somos img{
-      width: 80%;
-    }
+  #quienes-somos img {
+    width: 80%;
   }
+}
 
+#trabajos-realizados {
+  height: 100vh;
+  background-color: rgba(12, 1, 44, 0.69);
+  padding: 40px;
+  text-align: center;
+}
 
-  
-  #trabajos-realizados {
-    height: 100vh;
-    background-color: #313030af;
-    padding: 40px;
-    text-align: center;
-  }
+.carousel {
+  width: 50%;
+  height: 70%;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  margin: auto;
+}
 
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  border-radius: 15px;
+}
+
+.carousel img.active {
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
   .carousel {
-    width: 50%;
-    height: 70%; /* Ajusta la altura según tus necesidades */
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    margin: auto;
-    
-  }
-  
-  .carousel img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    border-radius: 15px;
-  
+    margin: 0;
   }
-  
-  .carousel img.active {
-    opacity: 1;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .carousel{
-      width: 100%;
-      height: 100%;
-      margin: 0;
-    }
-  }
-  
+}
 
-  
-
-  /* Estilos de la sección de contacto */
+/* Estilos de la sección de contacto */
 #contacto {
-    background-color: #fff;
-    padding: 40px;
-    text-align: center;
+  background-color: #1f0000a2;
+  padding: 40px;
+  text-align: center;
+}
+
+
+.contacto-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contacto-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 20px;
+  width: 30%;
+  background-color: #01080000;
+  backdrop-filter: blur(20px);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Estilos para el botón de WhatsApp */
+.contacto-item a {
+  display: inline-block;
+  background-color: #25D366;
+  color: #FFF;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 15px;
+}
+
+.contacto-item a i {
+  margin-right: 5px;
+}
+
+.contacto-item a:hover {
+  background-color: #128C7E;
+}
+
+#call{
+  background-color: blue;
+}
+
+#call:hover{
+  background-color:rgb(34, 34, 212);
+}
+
+.contacto-item h3 {
+  color: wheat;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.contacto-item p {
+  color: whitesmoke;
+  font-size: 16px;
+}
+
+.contacto-item img{
+  width: 10%;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .contacto-info {
+    flex-direction: column;
   }
-  
-  #contacto h2 {
-    color: #333;
-    font-size: 24px;
+
+  .contacto-item {
+    flex: 1 1 auto;
     margin-bottom: 20px;
   }
-  
-  .contacto-info {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .contacto-item {
-    width: 200px;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .contacto-item h3 {
-    color: #333;
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .contacto-item p {
-    color: #666;
-    font-size: 16px;
-  }
-  
-  /* Estilos adicionales o ajustes responsivos según sea necesario */
-  
-  
+}
+
+
+
+/* Pie de página */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+/* Estilos adicionales o ajustes responsivos según sea necesario */
