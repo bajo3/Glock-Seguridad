@@ -7,7 +7,6 @@ $(document).ready(function() {
     menu.classList.toggle('open');
   });
 
-  $(document).ready(function() {
     $('.carousel').slick({
       autoplay: true,
       autoplaySpeed: 2000,
@@ -31,7 +30,6 @@ $(document).ready(function() {
         }
       ]
     });
-  });
   
 });
 
