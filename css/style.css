@@ -276,24 +276,48 @@ body {
 
   
   #trabajos-realizados {
+    height: 100vh;
     background-color: #313030af;
     padding: 40px;
     text-align: center;
   }
+
+  .carousel {
+    width: 50%;
+    height: 70%; /* Ajusta la altura según tus necesidades */
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    margin: auto;
+    
+  }
   
-  /* Estilos responsivos */
+  .carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    border-radius: 15px;
+  
+  }
+  
+  .carousel img.active {
+    opacity: 1;
+  }
+  
   @media screen and (max-width: 768px) {
-    nav ul li {
-      display: block;
-      margin-bottom: 10px;
-    }
-  
-    .imagen {
+    .carousel{
       width: 100%;
-      height: auto;
-      margin: 10px 0;
+      height: 100%;
+      margin: 0;
     }
   }
+  
+
   
 
   /* Estilos de la sección de contacto */
@@ -335,4 +359,5 @@ body {
   }
   
   /* Estilos adicionales o ajustes responsivos según sea necesario */
+  
   
