@@ -10,7 +10,7 @@ $(document).ready(function() {
   $(document).ready(function() {
     $('.carousel').slick({
       autoplay: true,
-      autoplaySpeed: 3000,
+      autoplaySpeed: 2000,
       infinite: true,
       dots: true,
       fade: true,
@@ -19,13 +19,13 @@ $(document).ready(function() {
         {
           breakpoint: 768,
           settings: {
-            arrows: false
+            arrows: true
           }
         },
         {
           breakpoint: 480,
           settings: {
-            arrows: false,
+            arrows: true,
             dots: false
           }
         }
